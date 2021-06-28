@@ -1,0 +1,69 @@
+const tweets = [
+{
+  id: 't1',
+
+  user: {
+    id: 'u1',
+    username: 'cwade22 ',
+    name: ' Carlie Jo ',
+    image: 'https://scontent-lax3-2.xx.fbcdn.net/v/t1.6435-9/86318359_10220402755489252_4183327158808084480_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=6roe---DanUAX_AK3gQ&_nc_ht=scontent-lax3-2.xx&oh=c842cbbfa3d8912b16d145f115ff3370&oe=60DDB3CC',
+  },
+  createdAt: '2020-08-27T12:00:00.000Z',
+  content: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book',
+  image: 'data:image/jpeg;base64,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',
+  numberOfComments: 123,
+  numberOfRetweets: 11,
+  numberOfLikes: 20,
+  
+},
+{
+  id: 't2',
+
+  user: {
+    id: 'u1',
+    username: 'cwade22 ',
+    name: ' Carlie Jo ',
+    image: 'https://scontent-lax3-2.xx.fbcdn.net/v/t1.6435-9/86318359_10220402755489252_4183327158808084480_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=6roe---DanUAX_AK3gQ&_nc_ht=scontent-lax3-2.xx&oh=c842cbbfa3d8912b16d145f115ff3370&oe=60DDB3CC',
+  },
+  createdAt: '2021-05-27T14:21:00.000Z',
+  content: ' IS 657 went by too fast!',
+  numberOfComments: 14,
+  numberOfRetweets: 2,
+  numberOfLikes: 5,
+  
+},
+{
+  id: 't3',
+
+  user: {
+    id: 'u1',
+    username: 'cwade22 ',
+    name: ' Carlie Jo ',
+    image: 'https://scontent-lax3-2.xx.fbcdn.net/v/t1.6435-9/86318359_10220402755489252_4183327158808084480_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=6roe---DanUAX_AK3gQ&_nc_ht=scontent-lax3-2.xx&oh=c842cbbfa3d8912b16d145f115ff3370&oe=60DDB3CC',
+  },
+  createdAt: '2021-05-27T14:21:00.000Z',
+  content: ' Hello World!',
+  numberOfComments: 1234,
+  numberOfRetweets: 247,
+  numberOfLikes: 5000,
+  
+},
+{
+  id: 't4',
+
+  user: {
+    id: 'u1',
+    username: 'cwade22 ',
+    name: ' Carlie Jo ',
+    image: 'https://scontent-lax3-2.xx.fbcdn.net/v/t1.6435-9/86318359_10220402755489252_4183327158808084480_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=6roe---DanUAX_AK3gQ&_nc_ht=scontent-lax3-2.xx&oh=c842cbbfa3d8912b16d145f115ff3370&oe=60DDB3CC',
+  },
+  createdAt: '2021-05-27T14:21:00.000Z',
+  content: ' Im so sleepy!',
+  numberOfComments: 500,
+  numberOfRetweets: 35,
+  numberOfLikes: 321,
+  
+},
+];
+
+export default tweets
